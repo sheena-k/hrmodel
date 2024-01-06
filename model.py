@@ -114,6 +114,7 @@ rf_cls =RandomForestClassifier()
 model_rf = rf_cls.fit(x_train,y_train)
 
 y_pred_rf = model_rf.predict(x_test)
-
-
-
+import pickle
+filename="savemodel.pickle"
+with open(filename,"wb") as file:
+  pickle.dump(model_rf,file)
