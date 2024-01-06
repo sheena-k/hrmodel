@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Change Prediction</title>
+</head>
+
+<body>
+
+    <div style="color: #001f4d">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1 id="heading">Predict Job Change as Data Scientist</h1>
+
+<div class="card-title">
+            <h2>City development index</h2>
+            <input class="input" name="city_development_index" required="number" >
+</div>
+
+<br>
+
+<div class="card-title">
+            <h2>Gender</h2>
+                <select class="input" name="gender" required="required">
+                    <option value="2">Male</option>
+                    <option value="1">Female</option>
+                    <option value="0">Donot Mention</option>
+                    <option value="3">Other</option>
+                </select>
+</div>
+
+<br>
+
+<div class="card-title">
+            <h2>Relevent_experience</h2>
+                <select class="input" name="relevent_experience" required="required">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+</div>
+
+<br>
+
+<div class="card-title">
+            <h2>Enrolled_university</h2>
+                <select class="input" name="enrolled_university" required="required">
+                    <option value="enrolled_university_no_enrollment">No enrollment</option>
+                    <option value="enrolled_university_Full_time_course">Full time course</option>
+                    <option value="enrolled_university_Part_time_course">Part time course</option>
+                </select>
+</div>
+
+<br>
+
+<div class="card-title">
+            <h2>Education_level</h2>
+                <select class="input" name="education_level" required="required">
+                    <option value="4">Primary School</option>
+                    <option value="0">Graduate</option>
+                    <option value="2">Masters</option>
+                    <option value="1">High School</option>
+                    <option value="3">Phd</option>
+                </select>
+</div>
+
+<br>
+
+<div class="card-title">
+            <h2>Major_discipline</h2>
+                <select class="input" name="major_discipline" required="required">
+                    <option value="major_discipline_Arts">Arts</option>
+                    <option value="major_discipline_Degree">Buisness Degree</option>
+                    <option value="major_discipline_STEM">STEM</option>
+                    <option value="major_discipline_Humanities">Humanities</option>
+                    <option value="major_discipline_No_Major">Not Major Discipline</option>
+                    <option value="major_discipline_Other">Other</option>
+                </select>
+</div>
+
+<br>
+
+<div class="card-title">
+            <h2>Experience</h2>
+                  <input class="input" name="experience" required="required" >
+</div>
+
+<br>
+<div class="card-title">
+    <h2>Company_size</h2>
+        <select class="input" name="company_size" required="required">
+    
+            <option value="4">Startup</option>
+            <option value="3">Small</option>
+            <option value="1">Medium</option>
+            <option value="0">Large</option>
+            <option value="2">NW</option>
+        </select>
+</div>
+<br>
+<div class="card-title">
+            <h2>Company_type</h2>
+                <select class="input" name="company_type" required="required">
+                    <option value="company_type_Early_Stage_Startup">Pvt Ltd</option>
+                    <option value="company_type_Funded_Startup">Funded Startup</option>
+                    <option value="company_type_Early_Stage_Startup">Early Stage Startup</option>
+                    <option value="company_type_Other_type">Other type</option>
+                    <option value="company_type_Public_Sector">Public Sector</option>
+                    <option value="company_type_NW">Not Yet Working</option>
+                    <option value="company_type_NGO">NGO</option>
+                </select>
+</div>
+
+<br>
+
+<div class="card-title">
+            <h2>Last_new_job</h2>
+                 <input class="input" name="last_new_job" required="required" >
+</div>
+
+<br>
+
+<div class="card-title">
+            <h2>Training_hours</h2>
+                 <input class="input" name="training_hours" required="required">
+</div>
+            <br>
+            <button class="submit" type="submit">Submit</button>
+            <br>
+
+        </form>
+
+    </div>
+
+        <br><h1>{{ prediction_text }}</h1>
+
+
+    <style>
+        body {
+            background-image: url("https://img.freepik.com/free-photo/businessman-with-colorful-graph_1232-167.jpg?w=740&t=st=1704465039~exp=1704465639~hmac=fdd2af9774b02e26647c857fba3ae938ea8cc41ced2549b664ab4db248246fdd");
+            text-align: center;
+            padding: 0px;
+            background-position:center; background-repeat:no-repeat; background-size:cover;
+            margin:auto;
+        }
+        #heading{
+            line-height:80px;
+            color:white;
+            background-color:#0099ff;
+        }
+
+        h1{background-color:#f2f2f2}
+
+        h2{color:#003399;}
+        
+.card-title{
+background-color: #f2f2f2;
+padding:5px;
+margin-bottom:2px;
+border-radius:15px;
+width:600px;
+height:100px;
+margin:auto;
+}
+
+.input{
+width: 300px;
+
+height: 43px;
+
+text-align: center;
+
+border-radius: 16px;
+
+font-size: 18px;
+
+
+}
+
+.submit{
+width: 200px;
+
+height: 50px;
+
+text-align: center;
+
+border-radius: 16px;
+
+font-size: 18px;
+}
+
+    </style>
+</body>
+
+</html>
