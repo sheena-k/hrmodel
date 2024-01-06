@@ -6,7 +6,7 @@ import numpy as np
 
 
 from flask import Flask, request, render_template
-from flask_cors import cross_origin
+#from flask_cors import cross_origin
 
 
 app = Flask(__name__)  # initializing a flask app
@@ -14,7 +14,7 @@ app = Flask(__name__)  # initializing a flask app
 model = pickle.load(open('savemodel.pickle','rb'))
 
 @app.route("/")  
-@cross_origin()
+#@cross_origin()
 
 
 def home():
@@ -23,7 +23,7 @@ def home():
 
 
 @app.route("/predict", methods= ["GET","POST"])
-@cross_origin()
+#@cross_origin()
 
 
 def predict():
