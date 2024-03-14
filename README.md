@@ -1,6 +1,8 @@
-HR Analytics
-
-Abstract:
+# HR Analytics
+---
+![Github Logo](https://github.com/sheena-k/project_hr/blob/main/data_sci.png)
+---
+## Abstract:
 
 HR analytics involves collecting, analyzing and interpreting data related to various HR functions. This study delves into the intricate landscape of Human Resources (HR) by leveraging a rich and extensive dataset. The dataset encompasses diverse facets of HR functions, including employee demographics, recruitment processes, performance evaluations, training initiatives, and employee satisfaction metrics.This project is about an MNC which is active in Big Data and Data Science.
 
